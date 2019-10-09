@@ -5,8 +5,8 @@ import java.util.Scanner;
 import java.math.MathContext;
 
 enum Color{
-    white ,
-    black ,
+    white,
+    black,
     green,
     red,
     yellow
@@ -28,14 +28,12 @@ enum Animal{
 }
 
 public class Functional {
-    public int IntTaskMinutes(int N){
-        double num;
-        int res;
-        num = N/60;
-        res = (int) num;
-        return res;
+    public int intTaskMinutes(int n){
+
+        return n/60;
+
     }
-    public int IfTaskIndex(int a1,int a2,int a3,int a4){
+    public int ifTaskIndex(int a1,int a2,int a3,int a4){
         int res = -1;
         if((a1 == a2)&&(a1==a3)&&(a1!=a4)){
             res = 4;
@@ -51,22 +49,17 @@ public class Functional {
         }
         return res;
     }
-    public boolean BoolTaskNumbers(int a,int b,int c){
-        boolean res;
-        if((a==-b)||(a==-c)||(b==-c))
-            res = true;
-        else
-            res = false;
-        return res;
+    public boolean boolTaskNumbers(int a,int b,int c){
+        return(a==-b)||(a==-c)||(b==-c);
     }
-    public long ForTaskFactorial(int N){
+    public long forTaskFactorial(int N){
         long res = 1;
         for(int i = 1;i <= N;i++){
             res *= i;
         }
         return res;
     }
-    public int WhileTaskRevers(int Num){
+    public int whileTaskRevers(int Num){
         int res = 0;
         while(Num>0){
             res = res * 10 + Num % 10;
@@ -74,7 +67,7 @@ public class Functional {
         }
         return res;
     }
-    public int ArrayTaskLastIndex(int arr[],int size){
+    public int arrayTaskLastIndex(int arr[],int size){
         int res = -1;
         for(int i = 0;i < size;i++){
             if((arr[i]>arr[0])&&(arr[i]<arr[size-1])){
@@ -83,7 +76,7 @@ public class Functional {
         }
         return res;
     }
-    public int[] MatrixTaskSum(int arr[][],int m,int n){
+    public int[] matrixTaskSum(int arr[][],int m,int n){
         int res[] = new int[n];
         for(int i = 0;i < n;i++){
             for(int j = 0;j < m;j++){
@@ -92,7 +85,7 @@ public class Functional {
         }
         return res;
     }
-    public Dot InputOutputTaskSquare(int x1,int y1,int x2,int y2){
+    public Dot inputOutputTaskSquare(int x1,int y1,int x2,int y2){
         int x,y;
         Dot res = new Dot();
         y = Math.abs(y1 - y2);
@@ -101,10 +94,11 @@ public class Functional {
         res.y = x * y;
         return res;
     }
-    public String SwitchTaskYear(int Year){
-        String res1 = "", res2 = "";
+    public String switchTaskYear(int Year){
+        String res1 = "";
+        String res2 = "";
         switch (Year % 10){
-            case 1 : res1 = Color.white.toString() + " ";
+            case 1 : res1 = Color.white + " ";
                 break;
             case 0 : res1 = Color.white.toString() + " ";
                 break;

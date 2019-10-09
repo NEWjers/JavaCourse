@@ -9,7 +9,7 @@ public class Main {
         Functional Ob = new Functional();
         Scanner out = new Scanner(System.in);
         String result;
-        result = Ob.SwitchTaskYear(2000);
+        result = Ob.switchTaskYear(2000);
         System.out.print(result);
     }
 }

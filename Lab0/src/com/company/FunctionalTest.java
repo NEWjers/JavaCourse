@@ -7,70 +7,70 @@ public class FunctionalTest {
     @Test
     public void testInt_pos(){
         Functional obj = new Functional();
-        int actual = obj.IntTaskMinutes(12000);
+        int actual = obj.intTaskMinutes(12000);
         int expected = 200;
         assertEquals(expected, actual);
     }
     @Test
     public void testInt_neg(){
         Functional obj = new Functional();
-        int actual = obj.IntTaskMinutes(1000);
+        int actual = obj.intTaskMinutes(1000);
         int expected = 200;
         assertEquals(expected, actual);
     }
     @Test
     public void testIf_pos(){
         Functional obj = new Functional();
-        int actual = obj.IfTaskIndex(1,4,1,1);
+        int actual = obj.ifTaskIndex(1,4,1,1);
         int expected = 2;
         assertEquals(expected, actual);
     }
     @Test
     public void testIf_neg(){
         Functional obj = new Functional();
-        int actual = obj.IfTaskIndex(1,1,1,4);
+        int actual = obj.ifTaskIndex(1,1,1,4);
         int expected = 3;
         assertEquals(expected, actual);
     }
     @Test
     public void testBool_pos(){
         Functional obj = new Functional();
-        boolean actual = obj.BoolTaskNumbers(1,-1,6);
+        boolean actual = obj.boolTaskNumbers(1,-1,6);
         boolean expected = true;
         assertEquals(expected, actual);
     }
     @Test
     public void testBool_neg(){
         Functional obj = new Functional();
-        boolean actual = obj.BoolTaskNumbers(1,5,6);
+        boolean actual = obj.boolTaskNumbers(1,5,6);
         boolean expected = true;
         assertEquals(expected, actual);
     }
     @Test
     public void testFor_pos(){
         Functional obj = new Functional();
-        long actual = obj.ForTaskFactorial(3);
+        long actual = obj.forTaskFactorial(3);
         long expected = 6;
         assertEquals(expected, actual);
     }
     @Test
     public void testFor_neg(){
         Functional obj = new Functional();
-        long actual = obj.ForTaskFactorial(4);
+        long actual = obj.forTaskFactorial(4);
         long expected = 26;
         assertEquals(expected, actual);
     }
     @Test
     public void testWhile_pos(){
         Functional obj = new Functional();
-        int actual = obj.WhileTaskRevers(1256);
+        int actual = obj.whileTaskRevers(1256);
         int expected = 6521;
         assertEquals(expected, actual);
     }
     @Test
     public void testWhile_neg(){
         Functional obj = new Functional();
-        int actual = obj.WhileTaskRevers(56);
+        int actual = obj.whileTaskRevers(56);
         int expected = 56;
         assertEquals(expected, actual);
     }
@@ -81,7 +81,7 @@ public class FunctionalTest {
         for(int i = 0;i<5;i++){
             arr[i] = i;
         }
-        int actual = obj.ArrayTaskLastIndex(arr,5);
+        int actual = obj.arrayTaskLastIndex(arr,5);
         int expected = 2;
         assertEquals(expected, actual);
     }
@@ -94,14 +94,14 @@ public class FunctionalTest {
                 matrix[i][j] = 1;
             }
         }
-        int[] actual = obj.MatrixTaskSum(matrix,3,3);
+        int[] actual = obj.matrixTaskSum(matrix,3,3);
         int expected = 3;
         assertEquals(expected, actual);
     }
     @Test
     public void testSwitch_pos(){
         Functional obj = new Functional();
-        String actual = obj.SwitchTaskYear(2000);
+        String actual = obj.switchTaskYear(2000);
         String expected = "white dragon";
         assertEquals(expected, actual);
     }
