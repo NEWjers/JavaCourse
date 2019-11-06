@@ -3,6 +3,7 @@ package com.company;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Enrollee {
     private String name;
@@ -87,6 +88,22 @@ public class Enrollee {
             if(it.getSubject()==subject)
                 it.setMark(mark);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Enrollee enrollee = (Enrollee) o;
+        return Objects.equals(name, enrollee.name) &&
+                Objects.equals(surname, enrollee.surname) &&
+                Objects.equals(birthday, enrollee.birthday) &&
+                Objects.equals(zno, enrollee.zno);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, birthday, zno);
     }
 
     float averageZNO(){

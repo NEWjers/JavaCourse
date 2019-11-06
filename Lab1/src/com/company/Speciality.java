@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Speciality {
     private String name;
@@ -65,6 +66,20 @@ public class Speciality {
     public void setZNO3(Exam zno3){
         this.minZNO.remove(2);
         this.minZNO.set(2,zno3);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Speciality that = (Speciality) o;
+        return Objects.equals(name, that.name) &&
+                Objects.equals(minZNO, that.minZNO);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, minZNO);
     }
 
     public boolean checkEnrollee(Enrollee Ob){
