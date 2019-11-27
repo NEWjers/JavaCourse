@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Enrollee>
+<Name>Serhiy</Name>
+<Surname>Pityk</Surname>
+<Birthday>27.3.2000</Birthday>
+<ZNO1>
+<Mark>188</Mark>
+<Subject>Math</Subject>
+</ZNO1>
+<ZNO2>
+<Mark>164</Mark>
+<Subject>English</Subject>
+</ZNO2>
+<ZNO3>
+<Mark>174</Mark>
+<Subject>Ukrainian</Subject>
+</ZNO3>
+</Enrollee>
