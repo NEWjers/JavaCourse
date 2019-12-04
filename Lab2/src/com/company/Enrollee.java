@@ -1,15 +1,19 @@
 package com.company;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Enrollee {
+public class Enrollee implements Comparable<Enrollee> {
     private String name;
     private String surname;
     private String birthday;
     private List<Exam> zno; // List<>
+
+    @Override
+    public int compareTo(Enrollee o) {
+        return (int)this.averageZNO() - (int)o.averageZNO();
+    }
 
     public static class Builder{
         private Enrollee newEnrollee;
@@ -69,6 +73,10 @@ public class Enrollee {
 
     Exam getZNO3(){
         return zno.get(2);
+    }
+
+    public List<Exam> getZno() {
+        return zno;
     }
 
     void setName(String name){
