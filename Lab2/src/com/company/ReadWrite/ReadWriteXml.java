@@ -1,8 +1,10 @@
-package com.company;
+package com.company.ReadWrite;
 
 import java.io.File;
 import java.io.IOException;
 
+import com.company.Model.Enrollee;
+import com.company.Model.Exam;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 

@@ -1,8 +1,9 @@
-package com.company;
+package com.company.ReadWrite;
 
 import java.io.*;
 import java.util.Scanner;
 
+import com.company.Model.Enrollee;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

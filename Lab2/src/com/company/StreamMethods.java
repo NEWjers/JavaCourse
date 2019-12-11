@@ -1,6 +1,7 @@
 package com.company;
 
-import java.util.ArrayList;
+import com.company.Model.Enrollee;
+
 import java.util.List;
 import java.util.stream.Collectors;
 

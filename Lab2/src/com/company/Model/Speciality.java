@@ -1,10 +1,11 @@
-package com.company;
+package com.company.Model;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Speciality {
+    private int id;
     private String name;
     private List<Exam> minZNO;
 
@@ -12,6 +13,11 @@ public class Speciality {
         private Speciality newSpeciality;
         public Builder(){
             newSpeciality = new Speciality();
+        }
+
+        public Builder withId(int id){
+            newSpeciality.id = id;
+            return this;
         }
 
         public Builder withName(String name){
@@ -33,6 +39,10 @@ public class Speciality {
 
     }
 
+    public int getId(){
+        return id;
+    }
+
     public String getName(){
         return name;
     }
@@ -47,6 +57,10 @@ public class Speciality {
 
     public Exam getSubject3(){
         return minZNO.get(2);
+    }
+
+    public void setId(int id1){
+        this.id = id1;
     }
 
     public void setName(String name){

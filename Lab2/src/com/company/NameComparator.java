@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.Model.Enrollee;
+
 import java.util.Comparator;
 
 public class NameComparator implements Comparator<Enrollee> {
