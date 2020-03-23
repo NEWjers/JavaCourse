@@ -11,8 +11,9 @@ import javax.validation.constraints.Size;
 
 
 public class Enrollee implements Comparable<Enrollee> {
-    @NotNull(message = "Object must have an id")
-    private int id;
+
+    @NotNull
+    private String id;
 
     @NotNull
     @Size(min = 1 , max = 20 , message = "Name can't be longer than 30 characters or shorter than 1")
@@ -28,9 +29,6 @@ public class Enrollee implements Comparable<Enrollee> {
 
     private List<Exam> zno; // List<>
 
-    @NotNull
-    private int speciality_id;
-
     @Override
     public int compareTo(Enrollee o) {
         return (int)this.averageZNO() - (int)o.averageZNO();
@@ -43,7 +41,7 @@ public class Enrollee implements Comparable<Enrollee> {
             newEnrollee = new Enrollee();
         }
 
-        public Builder withId(int ID) {
+        public Builder withId(String ID) {
             newEnrollee.id = ID;
             return this;
         }
@@ -68,11 +66,6 @@ public class Enrollee implements Comparable<Enrollee> {
             newEnrollee.zno.add(zno1);
             newEnrollee.zno.add(zno2);
             newEnrollee.zno.add(zno3);
-            return this;
-        }
-
-        public Builder withSpeciality_Id(int id) {
-            newEnrollee.speciality_id = id;
             return this;
         }
 
@@ -123,20 +116,16 @@ public class Enrollee implements Comparable<Enrollee> {
         return zno.get(2);
     }
 
-    public int getSpeciality_id(){
-        return speciality_id;
-    }
-
     public List<Exam> getZno() {
         return zno;
     }
 
-    int getId(){
+    public String getId(){
         return  id;
     }
 
-    public void setSpeciality_id(int id){
-        this.speciality_id = id;
+    public void setId(String id1){
+        this.id = id1;
     }
 
     public void setName(String name){
@@ -158,19 +147,15 @@ public class Enrollee implements Comparable<Enrollee> {
         }
     }
 
-    public void setZNO(String subject, int mark, int index){
-        int i = 0;
+    public void setZNO(String subject, int mark,int index){
+        int i = 1;
         for(Exam it:zno){
-            if(i==index-1) {
+            if(i==index) {
                 it.setMark(mark);
                 it.setSubject(subject);
             }
             i++;
         }
-    }
-
-    void setId(int ID){
-        this.id = ID;
     }
 
     @Override
